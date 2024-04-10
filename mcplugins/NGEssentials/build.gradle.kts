@@ -3,13 +3,10 @@ plugins {
 }
 
 dependencies {
-    val paperVersion = "1.20.4-R0.1-SNAPSHOT"
-    val koinVersion = "3.5.3"
-
-    compileOnly("io.papermc.paper:paper-api:$paperVersion")
+    compileOnly("io.papermc.paper:paper-api:${property("versions.paper")}")
     compileOnly(project(":mcplugins:Commons"))
 
-    implementation("io.insert-koin:koin-core:$koinVersion")
+    implementation("io.insert-koin:koin-core:${property("versions.koin")}")
     implementation(kotlin("stdlib-jdk8"))
 }
 

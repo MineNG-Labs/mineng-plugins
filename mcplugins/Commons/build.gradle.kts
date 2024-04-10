@@ -3,9 +3,7 @@ plugins {
 }
 
 dependencies {
-    val paperVersion = "1.20.4-R0.1-SNAPSHOT"
-
-    compileOnly("io.papermc.paper:paper-api:$paperVersion")
+    compileOnly("io.papermc.paper:paper-api:${property("versions.paper")}")
 }
 
 val targetJavaVersion = 21
