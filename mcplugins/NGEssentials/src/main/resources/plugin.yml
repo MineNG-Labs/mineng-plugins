@@ -2,6 +2,7 @@ name: NGEssentials
 version: '${version}'
 main: br.com.mineng.ngessentials.NGEssentials
 api-version: '1.20'
+depend: [MineNG]
 libraries:
   - org.jetbrains.kotlin:kotlin-stdlib:1.9.23
   - org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.23

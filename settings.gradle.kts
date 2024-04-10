@@ -6,4 +6,5 @@ pluginManagement {
 
 rootProject.name = "MineNG-Plugins"
 
-include(":NGEssentials")
+include(":mcplugins:Commons")
+include(":mcplugins:NGEssentials")

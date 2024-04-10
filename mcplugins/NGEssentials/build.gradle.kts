@@ -7,6 +7,8 @@ dependencies {
     val koinVersion = "3.5.3"
 
     compileOnly("io.papermc.paper:paper-api:$paperVersion")
+    compileOnly(project(":mcplugins:Commons"))
+
     implementation("io.insert-koin:koin-core:$koinVersion")
     implementation(kotlin("stdlib-jdk8"))
 }
@@ -32,7 +34,7 @@ tasks.withType<JavaCompile> {
 
 tasks.processResources {
     val props = mapOf(
-        "version" to version
+        "version" to rootProject.version
     )
 
     inputs.properties(props)

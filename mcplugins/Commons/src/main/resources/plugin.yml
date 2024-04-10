@@ -1,0 +1,7 @@
+name: MineNG
+version: '${version}'
+main: br.com.mineng.commons.CommonsPlugin
+api-version: '1.20'
+libraries:
+  - org.jetbrains.kotlin:kotlin-stdlib:1.9.23
+  - org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.23

@@ -1,4 +1,4 @@
-package br.com.mineng.ngessentials.messages
+package br.com.mineng.commons.messages
 
 import net.kyori.adventure.text.Component
 import net.kyori.adventure.text.Component.text

@@ -1,4 +1,4 @@
-package br.com.mineng.ngessentials.command
+package br.com.mineng.commons.command
 
 import org.bukkit.command.Command
 import org.bukkit.command.CommandSender

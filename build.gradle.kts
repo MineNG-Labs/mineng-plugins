@@ -17,14 +17,12 @@ allprojects {
             url = uri("https://oss.sonatype.org/content/groups/public/")
         }
     }
+
+    tasks.withType<Jar> {
+        destinationDirectory = File("$rootDir/build/mcplugins")
+    }
 }
 
-
-dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-}
-
-tasks.test {
-    useJUnitPlatform()
+tasks.jar {
+    enabled = false
 }

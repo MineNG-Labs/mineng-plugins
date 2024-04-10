@@ -1,11 +1,11 @@
 package br.com.mineng.ngessentials.command
 
-import br.com.mineng.ngessentials.messages.Tag
-import br.com.mineng.ngessentials.messages.tag
-import net.kyori.adventure.text.Component
+import br.com.mineng.commons.command.PlayerCommand
+import br.com.mineng.commons.messages.Tag.AVISO
+import br.com.mineng.commons.messages.Tag.SUCESSO
+import br.com.mineng.commons.messages.tag
 import net.kyori.adventure.text.Component.space
 import net.kyori.adventure.text.Component.text
-import net.kyori.adventure.text.JoinConfiguration
 import org.bukkit.entity.Player
 
 class FlyCommand : PlayerCommand("fly", "Ativa o modo fly!", aliases = listOf("f")) {
@@ -17,7 +17,7 @@ class FlyCommand : PlayerCommand("fly", "Ativa o modo fly!", aliases = listOf("f
         player.allowFlight = !isVoando
 
         player.sendMessage(
-            tag(if (isVoando) Tag.AVISO else Tag.SUCESSO)
+            tag(if (isVoando) AVISO else SUCESSO)
                 .append(space())
                 .append(text(if(isVoando) "Fly desativado!" else "Flying ativado!")))
     }
