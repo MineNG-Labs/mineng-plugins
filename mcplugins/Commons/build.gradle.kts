@@ -4,6 +4,10 @@ plugins {
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:${property("versions.paper")}")
+    implementation("com.github.shynixn.mccoroutine:mccoroutine-bukkit-api:${property("versions.mccoroutine")}")
+    implementation("com.github.shynixn.mccoroutine:mccoroutine-bukkit-core:${property("versions.mccoroutine")}")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1-Beta")
+
 }
 
 val targetJavaVersion = 21
