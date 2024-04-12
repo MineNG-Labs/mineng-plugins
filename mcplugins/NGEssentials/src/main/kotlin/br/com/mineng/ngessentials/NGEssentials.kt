@@ -11,7 +11,7 @@ class NGEssentials : JavaPlugin() {
             .register("fly", FlyCommand())
 
         startKoin {
-            modules()
+            modules(mainModule(this@NGEssentials))
         }
     }
 }
