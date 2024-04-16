@@ -3,11 +3,20 @@ plugins {
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:${property("versions.paper")}")
-    implementation("com.github.shynixn.mccoroutine:mccoroutine-bukkit-api:${property("versions.mccoroutine")}")
-    implementation("com.github.shynixn.mccoroutine:mccoroutine-bukkit-core:${property("versions.mccoroutine")}")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1-Beta")
+    // Paper
+    api("io.papermc.paper:paper-api:${property("versions.paper")}")
 
+    // APIs
+    api("dev.jorel:commandapi-bukkit-core:${property("versions.commandapi")}")
+
+    // Kotlin-related
+    api(kotlin("stdlib-jdk8"))
+    api("io.insert-koin:koin-core:${property("versions.koin")}")
+
+    // Kotlin Coroutines
+    api("com.github.shynixn.mccoroutine:mccoroutine-bukkit-api:${property("versions.mccoroutine")}")
+    api("com.github.shynixn.mccoroutine:mccoroutine-bukkit-core:${property("versions.mccoroutine")}")
+    api("org.jetbrains.kotlinx:kotlinx-coroutines-core:${property("versions.coroutines")}")
 }
 
 val targetJavaVersion = 21
@@ -30,9 +39,15 @@ tasks.withType<JavaCompile> {
 }
 
 tasks.processResources {
-    val props = mapOf(
+    val props = mutableMapOf(
         "version" to rootProject.version
     )
+
+    properties.filter { it.key.startsWith("versions") }
+        .map { it.key.removePrefix("versions.") to it.value }
+        .forEach {
+            props["versions_${it.first}"] = it.second as Any
+        }
 
     inputs.properties(props)
 

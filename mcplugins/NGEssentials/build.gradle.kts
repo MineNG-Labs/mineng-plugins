@@ -3,11 +3,7 @@ plugins {
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:${property("versions.paper")}")
     compileOnly(project(":mcplugins:Commons"))
-
-    implementation("io.insert-koin:koin-core:${property("versions.koin")}")
-    implementation(kotlin("stdlib-jdk8"))
 }
 
 val targetJavaVersion = 21

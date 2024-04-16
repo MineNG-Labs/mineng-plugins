@@ -16,6 +16,10 @@ allprojects {
             name = "sonatype"
             url = uri("https://oss.sonatype.org/content/groups/public/")
         }
+        maven {
+            name = "codemc"
+            url = uri("https://repo.codemc.org/repository/maven-public/")
+        }
     }
 
     tasks.withType<Jar> {
