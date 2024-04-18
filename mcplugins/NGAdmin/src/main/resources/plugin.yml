@@ -1,0 +1,7 @@
+name: NGAdmin
+version: '${version}'
+main: br.com.mineng.ngadmin.NGAdmin
+api-version: '1.20'
+depend: [MineNG]
+libraries:
+  - com.github.oshi:oshi-core-java11:6.6.0

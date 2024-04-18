@@ -1,16 +1,16 @@
-package br.com.mineng.ngessentials
+package br.com.mineng.ngadmin
 
 import br.com.mineng.commons.NGPlugin
 import br.com.mineng.commons.ext.getAll
 import com.google.inject.Guice
 
-class NGEssentials : NGPlugin() {
+class NGAdmin : NGPlugin() {
     override fun onEnable() {
         createConfig()
 
         val injector = Guice.createInjector(DIModule(this))
 
-        registerCommands(bukkitCommands = injector.getAll())
+        registerCommands(brigadierCommands = injector.getAll())
         registerListeners(injector.getAll())
     }
 }

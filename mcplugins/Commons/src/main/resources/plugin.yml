@@ -2,11 +2,12 @@ name: MineNG
 version: '${version}'
 main: br.com.mineng.commons.CommonsPlugin
 api-version: '1.20'
+depend: [CommandAPI]
 libraries:
   - org.jetbrains.kotlin:kotlin-stdlib:${versions_kotlin}
   - org.jetbrains.kotlin:kotlin-stdlib-jdk8:${versions_kotlin}
   - com.github.shynixn.mccoroutine:mccoroutine-bukkit-api:${versions_mccoroutine}
   - com.github.shynixn.mccoroutine:mccoroutine-bukkit-core:${versions_mccoroutine}
   - org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions_coroutines}
-  - io.insert-koin:koin-core:${versions_koin}
-  - io.insert-koin:koin-core-jvm:${versions_koin}
+  - com.google.inject:guice:${versions_guice}
+  - dev.misfitlabs.kotlinguice4:kotlin-guice:${versions_kotlinguice}

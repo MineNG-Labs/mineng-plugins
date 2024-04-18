@@ -8,10 +8,14 @@ dependencies {
 
     // APIs
     api("dev.jorel:commandapi-bukkit-core:${property("versions.commandapi")}")
+    api("dev.jorel:commandapi-bukkit-kotlin:${property("versions.commandapi")}")
+
+    // DI
+    api("com.google.inject:guice:${property("versions.guice")}")
+    api("dev.misfitlabs.kotlinguice4:kotlin-guice:${property("versions.kotlinguice")}")
 
     // Kotlin-related
     api(kotlin("stdlib-jdk8"))
-    api("io.insert-koin:koin-core:${property("versions.koin")}")
 
     // Kotlin Coroutines
     api("com.github.shynixn.mccoroutine:mccoroutine-bukkit-api:${property("versions.mccoroutine")}")
